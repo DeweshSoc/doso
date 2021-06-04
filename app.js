@@ -5,7 +5,7 @@ const path = require("path");
 const express = require("express");
 
 //module imports
-
+const errorController = require("./controllers/erroController");
 
 //app settings
 const app = express();
@@ -17,7 +17,7 @@ app.set("views", "views");
 
 //middlewares
 app.use(express.static(path.join(__dirname,"public")));
-
+app.use("/",errorController.error404NotFound);
 
 const port = process.env.PORT;
 app.listen(3000,result=>{

@@ -1,0 +1,48 @@
+body{
+    background-color: #ffc996;
+    color: #583d72;
+    padding: 5%;
+}
+h1,h2,h3,h4,h5,h6{
+    margin-bottom: 5%;
+}
+
+/* colors */
+/* 9f5f80 */
+.home-auth-btn{ 
+    background-color: #ff8474;
+    color: #583d72;
+    padding: 1%;
+    text-decoration: none;
+    border: none;
+    transition: all 300ms;
+}
+
+.home-auth-btn:hover,.home-auth-btn:focus, .home-auth-btn:active{
+     background-color: #583d72;
+    color:#ffc996;
+    border: none;
+    box-shadow: none;
+}
+
+.modal-header{
+    background-color: #9f5f80;
+    color:#ffc996; 
+}
+.modal-body{
+    background-color:#dedede;
+    color: #9f5f80; 
+}
+
+.home-auth-btn-dark{
+     background-color: #9f5f80;
+    color:#ffc996;
+    padding:2%;
+    transition: all 300ms;
+}
+
+.home-auth-btn-dark:hover{
+    background-color: #ff8474;
+    color: #583d72;
+}
+
