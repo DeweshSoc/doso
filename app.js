@@ -13,11 +13,12 @@ app.set("view engine", "ejs");
 app.set("views", "views");
 
 //routers
-
+const homeRoutes = require("./routes/home");
 
 //middlewares
 app.use(express.static(path.join(__dirname,"public")));
-app.use("/",errorController.error404NotFound);
+app.use("/home",homeRoutes);
+app.use(errorController.error404NotFound);
 
 const port = process.env.PORT;
 app.listen(3000,result=>{
