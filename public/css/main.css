@@ -10,6 +10,7 @@ body{
 }
 h1,h2,h3,h4,h5,h6{
     font-family: "Roboto Slab";
+    margin-bottom: 1rem;
 }
 
 h1{
@@ -32,6 +33,25 @@ h5{
 
 h6{
     font-size: 0.9rem;
+}
+
+main{
+    padding: 1rem 2rem;
+}
+
+/* margins */
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+.mr-1{
+    margin-right: 1rem;
+}
+.ml-1{
+    margin-left: 1rem;
+}
+.mt-1{
+    margin-top: 1rem;
 }
 
 /* font families */
@@ -74,7 +94,7 @@ h6{
 }
 
 /* animations */
-@keyframes slidein {
+@keyframes slideInFromRight {
     from{
         margin-left: 100%;
         width: 0;
@@ -83,6 +103,29 @@ h6{
         margin-left: 0;
         width: 100%;
     }
+}
+@keyframes slideInFromBottom {
+    from{
+        margin-top: 10%;
+        height: 0%;
+        transform: rotate(1deg);
+    }
+    to{
+        margin-top: 0;
+        height: 100%;
+        transform: rotate(0deg);
+    }
+}
+
+.slidein-right{
+    animation-duration: 300ms;
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
+    animation-name: slideInFromRight;
+}
+.slidein-bottom{
+     animation-duration: 700ms;
+    animation-name: slideInFromBottom;
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 /* navigation */
@@ -147,12 +190,46 @@ h6{
     }
 }
 
-
-/* main */
-
-main{
-    padding: 1rem 2rem;
+/* buttons */
+a.btn{
+    padding: 0.5rem 1rem;
+    border: 1px solid #583d72;
+    border-radius: 5%;
+    text-decoration: none;
+    color: #583d72;
+    font-weight: 600;
+    font-family: "Open Sans";
+    transition: all 300ms ;
 }
+
+a.btn-dark{
+    color: #ffc996;
+    background-color: #583d72;
+}
+
+a.btn:hover{
+    background-color: #583d72;
+    color: #ffc996;
+}
+
+a.btn-dark:hover{
+    color: #583d72;
+    background-color: #ffc996;
+}
+
+/* grid */
+
+.grid{
+    list-style: none;
+}
+
+.half-grid{
+    display: flex;
+}
+.half-grid li{
+    width: 100%;
+}
+
 
 
 
