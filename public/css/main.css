@@ -73,6 +73,18 @@ h6{
     color: #9f5f80;
 }
 
+/* animations */
+@keyframes slidein {
+    from{
+        margin-left: 100%;
+        width: 0;
+    }
+    to{
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
 /* navigation */
 .navbar{
     display: flex;
@@ -80,6 +92,7 @@ h6{
     padding: 1rem 2rem;
     background-color: #583d72;
     font-family: 'Open Sans',sans-serif;
+    font-size: 1rem;
     margin-bottom: 2rem;
 }
 
@@ -94,6 +107,44 @@ h6{
 
 .nav-link{
     text-decoration: none;
+}
+
+.fa-bars{
+    display: none;
+}
+
+.dropdown-menu{
+    display: none;
+}
+
+/* navbar responsive */
+
+@media(max-width:990px){
+    .navbar{
+        flex-direction: column;
+    }
+
+    .navbar-nav{
+        display: none;
+    }
+
+    .fa-bars{
+        display: inline-block;
+        font-size: 1.2rem;
+        margin-left: auto;
+        cursor: pointer;
+    }
+
+    .dropdown-menu{
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hide{
+        display: none;
+    }
 }
 
 
