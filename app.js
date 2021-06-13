@@ -14,10 +14,12 @@ app.set("views", "views");
 
 //routers
 const homeRoutes = require("./routes/home");
+const authRoutes = require("./routes/auth");
 
 //middlewares
 app.use(express.static(path.join(__dirname,"public")));
-app.use("/home",homeRoutes);
+app.use(homeRoutes);
+app.use("/auth",authRoutes);
 app.use(errorController.error404NotFound);
 
 const port = process.env.PORT;

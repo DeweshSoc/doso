@@ -4,6 +4,8 @@ const router = express.Router();
 
 const homeController = require("../controllers/home");
 
-router.get("/homepage",homeController.getHomePage);
+router.get("/",homeController.getHomePage);
+
+router.get("/board",homeController.getBoard);
 
 module.exports = router;

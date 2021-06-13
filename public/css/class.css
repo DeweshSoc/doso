@@ -1,0 +1,34 @@
+.class-list{
+    list-style: none;
+    display: flex;
+}
+
+.class{
+    border: 1px solid #583d72;
+    border-radius: 5%;
+    padding: 1rem 2rem;
+    cursor: pointer;
+}
+
+.class a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+.class a i{
+    display: flex;
+    justify-content: flex-end;
+    transition: all 300ms;
+}
+
+.class:hover{
+    background-color: #583d72;
+    color: #ffc996;
+}
+
+.class:hover a i{
+    transform: scale(1.2);
+}
+
