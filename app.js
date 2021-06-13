@@ -15,7 +15,7 @@ app.set("views", "views");
 
 //dummy user 
 app.use((req, res, next) => {
-  User.findById("60c6549b9fd31a99f1a05c1f")
+  User.findById("60c671b622f27db16be0e0dc")
     .then((user) => {
       req.user = user; // this user is not just a js object is a full fledged mongoose model object with many functionalities
       next();
@@ -32,6 +32,7 @@ const authRoutes = require("./routes/auth");
 const User = require("./models/user");
 
 //middlewares
+app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(homeRoutes);
 app.use("/auth", authRoutes);
