@@ -1,0 +1,29 @@
+<%- include("../includes/head.ejs") %> 
+
+ <!-- My CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/class.css" />
+    
+    <title>DoSo | a NatGem doubt solving app</title>
+  </head>
+  <body>
+
+    <%- include("../includes/navigation.ejs") %> 
+
+    <main class="main-body slidein-bottom" id="main-body">
+       
+        <h2>Create A Class</h2>
+        <form action="/class/create" method="POST">
+            <label for="className">Class Title</label>
+            <input type="text" name="className" id="className">
+            <label for="classSubject">Subject</label>
+            <input type="text" name="classSubject">
+            <label for="classDescription">Description</label>
+            <input type="text" name="classDescription">
+            <input type="submit">
+        </form>
+    </main>
+
+
+
+<%- include("../includes/end.ejs") %> 
