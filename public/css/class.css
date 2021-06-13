@@ -5,7 +5,7 @@
 
 .class{
     border: 1px solid #583d72;
-    border-radius: 5%;
+    border-radius: 7px;
     padding: 1rem 2rem;
     cursor: pointer;
 }

@@ -11,23 +11,31 @@ const classSchema = new Schema({
     type: String,
     required: true,
   },
-  description:{
-      type: String,
-      requires: true
+  description: {
+    type: String,
+    required: true,
   },
   students: [
     {
-      userId: Schema.Types.ObjectId,
-      ref: "User",
+      userId: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: "User",
+      },
+      joinedOn: { type: Date, default: Date.now },
     },
   ],
   teachers: [
     {
-      userId: Schema.Types.ObjectId,
-      ref: "User",
+      userId: {
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: "User",
+      },
+      joinedOn: { type: Date, default: Date.now },
     },
   ],
-  owner:Schema.Types.ObjectId
+  owner: { type: Schema.Types.ObjectId, ref: "User", required: true },
 });
 
 const Class = mongoose.model("Class", classSchema);

@@ -18,7 +18,7 @@ const userSchema = new Schema({
         required: true,
         ref: "Class",
       },
-      enrolledOn: Date
+      enrolledOn: {type:Date,default:Date.now}
     },
   ],
   classes: [
@@ -28,8 +28,8 @@ const userSchema = new Schema({
         required: true,
         ref: "Class",
       },
-      createdOn: Date,
-      owner: Boolean
+      createdOn: {type:Date,default:Date.now},
+      owner: {type:Boolean,default:true}
     },
   ],
 });
