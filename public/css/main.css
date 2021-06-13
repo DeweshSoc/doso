@@ -93,6 +93,11 @@ main{
     color: #9f5f80;
 }
 
+/* utility */
+.hide{
+    display: none;
+}
+
 /* animations */
 @keyframes slideInFromRight {
     from{
@@ -156,10 +161,6 @@ main{
     display: none;
 }
 
-.dropdown-menu{
-    display: none;
-}
-
 /* navbar responsive */
 
 @media(max-width:990px){
@@ -185,13 +186,13 @@ main{
         text-align: center;
     }
 
-    .hide{
+    .hide-navbar{
         display: none;
     }
 }
 
 /* buttons */
-a.btn{
+.btn{
     padding: 0.5rem 1rem;
     border: 1px solid #583d72;
     border-radius: 5%;
@@ -202,17 +203,17 @@ a.btn{
     transition: all 300ms ;
 }
 
-a.btn-dark{
+.btn-dark{
     color: #ffc996;
     background-color: #583d72;
 }
 
-a.btn:hover{
+.btn:hover{
     background-color: #583d72;
     color: #ffc996;
 }
 
-a.btn-dark:hover{
+.btn-dark:hover{
     color: #583d72;
     background-color: #ffc996;
 }
@@ -230,9 +231,34 @@ a.btn-dark:hover{
     width: 100%;
 }
 
+/* overlay */
 
+.overlay-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+}
 
+.overlay{
+    background-color: #ffc996;
+    width: 40%;
+    height: 40vh;
+    margin: 30vh auto;
+}
 
+/* general styles */
+
+.plus-btn{
+    font-size: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0 3% 3% 0;
+}
 
 
 

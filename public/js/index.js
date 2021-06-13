@@ -5,7 +5,7 @@ const dropdownMenuOne = document.getElementById("dropdown-menu1");
 
 
 barsBtn.addEventListener("click",e=>{
-   dropdownMenuOne.classList.toggle("hide");
+   dropdownMenuOne.classList.toggle("hide-navbar");
 });
 
 // open classes by clicking on class cards
@@ -20,3 +20,16 @@ for(let i=0;i<classes.length;i++){
       window.open(clsLink.href,"_self");
    });
 }
+
+// open class join/create menu by clicking plus btn
+const plus = document.getElementById("plus-btn");
+const classOverlay = document.getElementById("class-menu-overlay");
+plus.addEventListener("click",e=>{
+   classOverlay.classList.remove("hide");
+})
+
+const closeOverlay = document.getElementById("close-overlay");
+closeOverlay.addEventListener("click",function(e){
+   // console.log(e);
+   classOverlay.classList.add("hide");
+})
