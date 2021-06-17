@@ -2,6 +2,7 @@
 const path = require("path");
 
 //external node packages
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 
@@ -15,7 +16,7 @@ app.set("views", "views");
 
 //dummy user 
 app.use((req, res, next) => {
-  User.findById("60c671b622f27db16be0e0dc")
+  User.findById("60cb522afcf7a9840974cc31")
     .then((user) => {
       req.user = user; // this user is not just a js object is a full fledged mongoose model object with many functionalities
       next();
@@ -40,9 +41,10 @@ app.use(errorController.error404NotFound);
 
 const port = process.env.PORT;
 
+const MONGODB_URI = process.env.MONGODB_URI 
 mongoose
   .connect(
-    "mongodb+srv://dewesh-123:dewesh-123@cluster0.tn4nr.mongodb.net/dosoDB?retryWrites=true&w=majority",
+    MONGODB_URI,
     {
       useUnifiedTopology: true,
       useNewUrlParser: true,
