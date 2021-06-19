@@ -20,7 +20,7 @@
                         <h4 class="title"><%= cls.classId.name %></h4>
                         <h6 class="t-name"><%=cls.classId.owner.name%></h6> 
                         <h6 class="code"><%= cls.classId.subject %></h6>
-                        <a href="/class/<%= cls.classId._id %>"><i class="fas fa-arrow-right"></i></a>
+                        <a href="/c/<%= cls.classId._id %>"><i class="fas fa-arrow-right"></i></a>
                     </li>
                 <%}) %> 
             <% }else{ %>
@@ -34,7 +34,7 @@
                         <h4 class="title"><%= cls.classId.name %></h4>
                         <h6 class="t-name"><%=cls.classId.owner.name%></h6> 
                         <h6 class="code"><%= cls.classId.subject %></h6>
-                        <a href="/class/<%= cls.classId._id %>"><i class="fas fa-arrow-right"></i></a>
+                        <a href="/c/<%= cls.classId._id %>"><i class="fas fa-arrow-right"></i></a>
                         </li>
                 <%})%>
             <%}else{%>

@@ -28,6 +28,7 @@ app.use((req, res, next) => {
 //routers
 const homeRoutes = require("./routes/home");
 const authRoutes = require("./routes/auth");
+const classRoutes = require("./routes/class");
 
 //models
 const User = require("./models/user");
@@ -37,6 +38,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, "public")));
 app.use(homeRoutes);
 app.use("/auth", authRoutes);
+app.use("/c",classRoutes);
 app.use(errorController.error404NotFound);
 
 const port = process.env.PORT;
