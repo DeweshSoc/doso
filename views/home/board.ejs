@@ -14,12 +14,17 @@
        
         <h2>Enrolled Classes</h2>
         <ul class="class-list">
-            <li class="class">
-                <h4 class="title">History 101</h4>
-                <h6 class="t-name">Mr Robert Kane</h6> 
-                <h6 class="code">EC691</h6>
-                <a href="#"><i class="fas fa-arrow-right"></i></a>
-            </li>
+            <%if(enrolledClasses){%>
+                <% enrolledClasses.forEach(cls=>{%>
+                    <li class="class">
+                        <h4 class="title"><%= cls.classId.name %></h4>
+                        <h6 class="t-name"><%=cls.classId.owner.name%></h6> 
+                        <h6 class="code"><%= cls.classId.subject %></h6>
+                        <a href="/class/<%= cls.classId._id %>"><i class="fas fa-arrow-right"></i></a>
+                    </li>
+                <%}) %> 
+            <% }else{ %>
+            <% } %>  
         </ul>
         <h2>Your Classes</h2>
         <ul class="class-list">

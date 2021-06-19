@@ -1,0 +1,25 @@
+<%- include("../includes/head.ejs") %> 
+
+ <!-- My CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/class.css" />
+    
+    <title>DoSo | a NatGem doubt solving app</title>
+  </head>
+  <body>
+
+    <%- include("../includes/navigation.ejs") %> 
+
+    <main class="main-body slidein-bottom" id="main-body">
+       
+        <h2>Join A Class</h2>
+        <form action="/class/join" method="POST">
+            <label for="Class ID">Class Id</label>
+            <input type="text" name="classId" id="classId">
+            <input type="submit" value="Join">
+        </form>
+    </main>
+
+
+
+<%- include("../includes/end.ejs") %> 
