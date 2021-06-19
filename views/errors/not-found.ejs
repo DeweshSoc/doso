@@ -1,0 +1,23 @@
+<%- include("../includes/head.ejs") %> 
+    <!-- My CSS -->
+    <link rel="stylesheet" href="/css/main.css" />
+    
+    <title>DoSo | a NatGem doubt solving app</title>
+  </head>
+  <body>
+
+    <%- include("../includes/navigation.ejs") %> 
+
+    <main class="main-body slidein-right" id="main-body">
+      <h1>Error</h1>
+
+      <h3 class="os">
+        <%=errorMessage%> 
+      </h3>
+      <a href="<%= redirectLink %>"><%= redirectName %></a>
+    </main>
+    
+
+
+
+<%- include("../includes/end.ejs") %> 
