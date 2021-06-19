@@ -7,7 +7,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 
 //module imports
-const errorController = require("./controllers/erroController");
+const errorController = require("./controllers/errorController");
 
 //app settings
 const app = express();
